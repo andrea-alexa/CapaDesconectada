@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnActualizarNT = new System.Windows.Forms.Button();
             this.btnObtenerNoTipado = new System.Windows.Forms.Button();
             this.GridNoTipado = new System.Windows.Forms.DataGridView();
+            this.btnBuscarNT = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnInsertarT = new System.Windows.Forms.Button();
             this.btnObtenerTipado = new System.Windows.Forms.Button();
             this.GridTipado = new System.Windows.Forms.DataGridView();
+            this.btnBuscarT = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarNT = new System.Windows.Forms.TextBox();
-            this.btnBuscarNT = new System.Windows.Forms.Button();
-            this.btnBuscarT = new System.Windows.Forms.Button();
             this.txtBuscarT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,8 +53,7 @@
             this.txtContactTitle = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnInsertarCliente = new System.Windows.Forms.Button();
-            this.btnInsertarT = new System.Windows.Forms.Button();
-            this.btnActualizarNT = new System.Windows.Forms.Button();
+            this.btnActualizarT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridNoTipado)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -71,6 +72,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DataSet no Tipado";
+            // 
+            // btnActualizarNT
+            // 
+            this.btnActualizarNT.Location = new System.Drawing.Point(269, 555);
+            this.btnActualizarNT.Name = "btnActualizarNT";
+            this.btnActualizarNT.Size = new System.Drawing.Size(112, 32);
+            this.btnActualizarNT.TabIndex = 5;
+            this.btnActualizarNT.Text = "Actualizar";
+            this.btnActualizarNT.UseVisualStyleBackColor = true;
+            this.btnActualizarNT.Click += new System.EventHandler(this.btnActualizarNT_Click);
             // 
             // btnObtenerNoTipado
             // 
@@ -92,18 +103,41 @@
             this.GridNoTipado.Size = new System.Drawing.Size(407, 367);
             this.GridNoTipado.TabIndex = 0;
             // 
+            // btnBuscarNT
+            // 
+            this.btnBuscarNT.Location = new System.Drawing.Point(96, 555);
+            this.btnBuscarNT.Name = "btnBuscarNT";
+            this.btnBuscarNT.Size = new System.Drawing.Size(112, 32);
+            this.btnBuscarNT.TabIndex = 4;
+            this.btnBuscarNT.Text = "Buscar";
+            this.btnBuscarNT.UseVisualStyleBackColor = true;
+            this.btnBuscarNT.Click += new System.EventHandler(this.btnBuscarNT_Click);
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnActualizarT);
             this.groupBox2.Controls.Add(this.btnInsertarT);
             this.groupBox2.Controls.Add(this.btnObtenerTipado);
             this.groupBox2.Controls.Add(this.GridTipado);
             this.groupBox2.Controls.Add(this.btnBuscarT);
+            this.groupBox2.Controls.Add(this.txtBuscarT);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(468, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(442, 606);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DataSet Tipado";
+            // 
+            // btnInsertarT
+            // 
+            this.btnInsertarT.Location = new System.Drawing.Point(165, 522);
+            this.btnInsertarT.Name = "btnInsertarT";
+            this.btnInsertarT.Size = new System.Drawing.Size(112, 32);
+            this.btnInsertarT.TabIndex = 8;
+            this.btnInsertarT.Text = "Enviar";
+            this.btnInsertarT.UseVisualStyleBackColor = true;
+            this.btnInsertarT.Click += new System.EventHandler(this.btnInsertarT_Click);
             // 
             // btnObtenerTipado
             // 
@@ -125,6 +159,16 @@
             this.GridTipado.Size = new System.Drawing.Size(413, 367);
             this.GridTipado.TabIndex = 1;
             // 
+            // btnBuscarT
+            // 
+            this.btnBuscarT.Location = new System.Drawing.Point(14, 522);
+            this.btnBuscarT.Name = "btnBuscarT";
+            this.btnBuscarT.Size = new System.Drawing.Size(112, 32);
+            this.btnBuscarT.TabIndex = 7;
+            this.btnBuscarT.Text = "Buscar";
+            this.btnBuscarT.UseVisualStyleBackColor = true;
+            this.btnBuscarT.Click += new System.EventHandler(this.btnBuscarT_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -141,29 +185,9 @@
             this.txtBuscarNT.Size = new System.Drawing.Size(137, 22);
             this.txtBuscarNT.TabIndex = 3;
             // 
-            // btnBuscarNT
-            // 
-            this.btnBuscarNT.Location = new System.Drawing.Point(96, 555);
-            this.btnBuscarNT.Name = "btnBuscarNT";
-            this.btnBuscarNT.Size = new System.Drawing.Size(112, 32);
-            this.btnBuscarNT.TabIndex = 4;
-            this.btnBuscarNT.Text = "Buscar";
-            this.btnBuscarNT.UseVisualStyleBackColor = true;
-            this.btnBuscarNT.Click += new System.EventHandler(this.btnBuscarNT_Click);
-            // 
-            // btnBuscarT
-            // 
-            this.btnBuscarT.Location = new System.Drawing.Point(101, 555);
-            this.btnBuscarT.Name = "btnBuscarT";
-            this.btnBuscarT.Size = new System.Drawing.Size(112, 32);
-            this.btnBuscarT.TabIndex = 7;
-            this.btnBuscarT.Text = "Buscar";
-            this.btnBuscarT.UseVisualStyleBackColor = true;
-            this.btnBuscarT.Click += new System.EventHandler(this.btnBuscarT_Click);
-            // 
             // txtBuscarT
             // 
-            this.txtBuscarT.Location = new System.Drawing.Point(650, 528);
+            this.txtBuscarT.Location = new System.Drawing.Point(177, 484);
             this.txtBuscarT.Name = "txtBuscarT";
             this.txtBuscarT.Size = new System.Drawing.Size(137, 22);
             this.txtBuscarT.TabIndex = 6;
@@ -171,7 +195,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(550, 531);
+            this.label2.Location = new System.Drawing.Point(77, 487);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 16);
             this.label2.TabIndex = 5;
@@ -267,25 +291,15 @@
             this.btnInsertarCliente.UseVisualStyleBackColor = true;
             this.btnInsertarCliente.Click += new System.EventHandler(this.btnInsertarCliente_Click);
             // 
-            // btnInsertarT
+            // btnActualizarT
             // 
-            this.btnInsertarT.Location = new System.Drawing.Point(269, 555);
-            this.btnInsertarT.Name = "btnInsertarT";
-            this.btnInsertarT.Size = new System.Drawing.Size(112, 32);
-            this.btnInsertarT.TabIndex = 8;
-            this.btnInsertarT.Text = "Enviar";
-            this.btnInsertarT.UseVisualStyleBackColor = true;
-            this.btnInsertarT.Click += new System.EventHandler(this.btnInsertarT_Click);
-            // 
-            // btnActualizarNT
-            // 
-            this.btnActualizarNT.Location = new System.Drawing.Point(269, 555);
-            this.btnActualizarNT.Name = "btnActualizarNT";
-            this.btnActualizarNT.Size = new System.Drawing.Size(112, 32);
-            this.btnActualizarNT.TabIndex = 5;
-            this.btnActualizarNT.Text = "Actualizar";
-            this.btnActualizarNT.UseVisualStyleBackColor = true;
-            this.btnActualizarNT.Click += new System.EventHandler(this.btnActualizarNT_Click);
+            this.btnActualizarT.Location = new System.Drawing.Point(315, 522);
+            this.btnActualizarT.Name = "btnActualizarT";
+            this.btnActualizarT.Size = new System.Drawing.Size(112, 32);
+            this.btnActualizarT.TabIndex = 9;
+            this.btnActualizarT.Text = "Actualizar";
+            this.btnActualizarT.UseVisualStyleBackColor = true;
+            this.btnActualizarT.Click += new System.EventHandler(this.btnActualizarT_Click);
             // 
             // Form1
             // 
@@ -303,8 +317,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtBuscarT);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscarNT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -314,6 +326,7 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridNoTipado)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridTipado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -347,6 +360,7 @@
         private System.Windows.Forms.Button btnInsertarCliente;
         private System.Windows.Forms.Button btnInsertarT;
         private System.Windows.Forms.Button btnActualizarNT;
+        private System.Windows.Forms.Button btnActualizarT;
     }
 }
 

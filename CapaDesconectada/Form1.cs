@@ -97,6 +97,7 @@ namespace CapaDesconectada
             if (customer != null)
             {
                 var objeto1 = customerRepository.ExtraerInformacionCliente(customer);
+                RellenarForm(objeto1);
                 Console.WriteLine(customer);
             }
         }
@@ -106,6 +107,42 @@ namespace CapaDesconectada
             var cliente = CrearCliente();
             int insertados = adaptador.Insert(cliente.CustomerID, cliente.CompanyName, cliente.ContactName, cliente.ContactTitle, cliente.Address, cliente.City, cliente.Region, cliente.PostalCode, cliente.Country, cliente.Phone, cliente.Fax);
             MessageBox.Show($"{insertados} resgistros insertados");
+        }
+
+        private void btnActualizarT_Click(object sender, EventArgs e)
+        {
+            var fila = adaptador.GetDataByCustomerID(txtCustomerID.Text);
+
+            if(fila != null)
+            {
+                var datoOriginal = customerRepository.ExtraerInformacionCliente(fila);
+                var datosModificados = CrearCliente();
+                var filas = adaptador.Update(
+             datosModificados.CustomerID,
+             datosModificados.CompanyName,
+             datosModificados.ContactName,
+             datosModificados.ContactTitle,
+             datosModificados.Address,
+             datosModificados.City,
+             datosModificados.Region,
+             datosModificados.PostalCode,
+             datosModificados.Country,
+             datosModificados.Phone,
+             datosModificados.Fax,
+             datoOriginal.CustomerID,
+             datoOriginal.CompanyName,
+             datoOriginal.ContactName,
+             datoOriginal.ContactTitle,
+             datoOriginal.Address,
+             datoOriginal.City,
+             datoOriginal.Region,
+             datoOriginal.PostalCode,
+             datoOriginal.Country,
+             datoOriginal.Phone,
+             datoOriginal.Fax
+                );
+                MessageBox.Show($"{filas} filas modificadas");
+            }
         }
         #endregion
 
