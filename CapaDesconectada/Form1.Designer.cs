@@ -55,6 +55,7 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnInsertarCliente = new System.Windows.Forms.Button();
             this.btnEliminarNT = new System.Windows.Forms.Button();
+            this.btnEliminarT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridNoTipado)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -117,6 +118,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnEliminarT);
             this.groupBox2.Controls.Add(this.btnActualizarT);
             this.groupBox2.Controls.Add(this.btnInsertarT);
             this.groupBox2.Controls.Add(this.btnObtenerTipado);
@@ -133,7 +135,7 @@
             // 
             // btnActualizarT
             // 
-            this.btnActualizarT.Location = new System.Drawing.Point(315, 522);
+            this.btnActualizarT.Location = new System.Drawing.Point(80, 598);
             this.btnActualizarT.Name = "btnActualizarT";
             this.btnActualizarT.Size = new System.Drawing.Size(112, 32);
             this.btnActualizarT.TabIndex = 9;
@@ -143,7 +145,7 @@
             // 
             // btnInsertarT
             // 
-            this.btnInsertarT.Location = new System.Drawing.Point(165, 522);
+            this.btnInsertarT.Location = new System.Drawing.Point(269, 537);
             this.btnInsertarT.Name = "btnInsertarT";
             this.btnInsertarT.Size = new System.Drawing.Size(112, 32);
             this.btnInsertarT.TabIndex = 8;
@@ -173,7 +175,7 @@
             // 
             // btnBuscarT
             // 
-            this.btnBuscarT.Location = new System.Drawing.Point(14, 522);
+            this.btnBuscarT.Location = new System.Drawing.Point(80, 537);
             this.btnBuscarT.Name = "btnBuscarT";
             this.btnBuscarT.Size = new System.Drawing.Size(112, 32);
             this.btnBuscarT.TabIndex = 7;
@@ -313,6 +315,16 @@
             this.btnEliminarNT.UseVisualStyleBackColor = true;
             this.btnEliminarNT.Click += new System.EventHandler(this.btnEliminarNT_Click);
             // 
+            // btnEliminarT
+            // 
+            this.btnEliminarT.Location = new System.Drawing.Point(269, 598);
+            this.btnEliminarT.Name = "btnEliminarT";
+            this.btnEliminarT.Size = new System.Drawing.Size(112, 32);
+            this.btnEliminarT.TabIndex = 10;
+            this.btnEliminarT.Text = "Eliminar";
+            this.btnEliminarT.UseVisualStyleBackColor = true;
+            this.btnEliminarT.Click += new System.EventHandler(this.btnEliminarT_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,6 +386,7 @@
         private System.Windows.Forms.Button btnActualizarNT;
         private System.Windows.Forms.Button btnActualizarT;
         private System.Windows.Forms.Button btnEliminarNT;
+        private System.Windows.Forms.Button btnEliminarT;
     }
 }
 
