@@ -146,5 +146,24 @@ namespace AccesoDatos
             comando.Parameters.AddWithValue("Address", cliente.Address);
             return comando;
         }
+
+        public int EliminarCliente(string id)
+        {
+            using (var conexion = DataBase.GetSqlConnection())
+            {
+                String Delete = "";
+                Delete = Delete + "DELETE FROM [dbo].[Customers] " + "\n";
+                Delete = Delete + "      WHERE CustomerID = @CustomerID";
+
+                using (var comando = new SqlCommand(Delete, conexion))
+                {
+                    comando.Parameters.AddWithValue("@CustomerID", id);
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.DeleteCommand = comando;
+                    var eliminadas = adapter.DeleteCommand.ExecuteNonQuery();
+                    return eliminadas;
+                }
+            }
+        }
     }
 }
